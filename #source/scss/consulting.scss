@@ -1,0 +1,36 @@
+/* Consulting */
+.consulting{
+	color: $white;
+	width: 100%;
+	background: $orange;
+	padding: 67.86px 154px 36.08px;
+	&__title{
+		@include font3(25px, 800);
+	}
+	&__subtitle{
+		@include font3(20px, 700);
+		margin: 8.76px 0 19.27px;
+	}
+	&__desc{
+		max-width: 730px;
+		@include font3(18px, 500);
+		margin-bottom: 47.45px;
+	}
+	&__button{
+		color: $white;
+		border-radius: 7px;
+		background: $blueText;
+		@include font3(15px, 600);
+		display: inline-block;
+		padding: 16px 18px;
+		cursor: pointer;
+		&:hover{
+			background: #1e1e37;
+			transition: .5s;
+		}
+	}
+	br{
+		display: none;
+	}
+}
+/* Consulting */

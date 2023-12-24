@@ -1,0 +1,45 @@
+/* Discount */
+.discount{
+	width: 100%;
+	background: $blueText;
+	padding: 75.5px 154px 69.1px;
+	&__content{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title{
+		color: $green;
+		@include font3(25px, 700);
+	}
+	&__desc{
+		color: $white;
+		max-width: 650px;
+		@include font3(20px, 600);
+		margin: 14.85px 0 61.98px;
+	}
+	&__box{
+		display: flex;
+		align-items: flex-start;
+		p{
+			color: $white;
+			@include font3(30px, 900);
+			line-height: 40px;
+			font-family: 'Nunito Sans', sans-serif;
+			margin-right: 13.51px;
+		}
+	}
+	&__button{
+		color: $white;
+		border-radius: 7px;
+		background: $green;
+		@include font3(15px, 600);
+		display: inline-block;
+		padding: 15px 52px;
+		cursor: pointer;
+		&:hover{
+			background: #41AB9E;
+			transition: .5s;
+		}
+	}
+}
+/* Discount */

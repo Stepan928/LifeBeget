@@ -1,0 +1,44 @@
+/* Cooperating */
+.cooperating{
+	color: $black;
+	width: 100%;
+	padding: 59.26px 35px 73.63px;
+	&__title{
+		text-align: center;
+		@include font3(24px, 600);
+	}
+	&__content{
+		width: 950px;
+		display: flex;
+		justify-content: space-between;
+		margin: 50px auto 0;
+	}
+	&__box{
+		width: 44.5%;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__photo2{
+		display: none;
+	}
+	.dot{
+		@include hw(19px, 19px);
+		border-radius: 20px;
+		margin: 12px auto;
+		&__green{
+			background: $green;
+		}
+		&__yellow{
+			background: $yellow;
+		}
+	}
+	p{
+		@include font3(20px, 600);
+	}
+	br{
+		display: none;
+	}
+}
+/* Cooperating */

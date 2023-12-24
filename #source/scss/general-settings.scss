@@ -1,0 +1,145 @@
+/* General Settings */
+html{
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	&::-webkit-scrollbar{
+		width: 7px;
+		background: $blueText;
+	}
+	&::-webkit-scrollbar-thumb{
+		border-radius: 25px;
+		background: $green;
+	}
+}
+::selection{
+	color:  #36454F;
+	background: #C0C0C0;
+}
+img{
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.preloader-wrapper{
+	@include hw(100%, 100%);
+	background: $darkBlue;
+	@include flex;
+	position: fixed;
+	top: 0; left: 0;
+	transition: opacity 0.8s ease;
+	z-index: 1000;
+}
+.spinner{
+	@include hw(80px, 80px);
+	border: 6px solid transparent;
+	border-top-color: $green;
+	border-radius: 50%;
+	animation: rotate 1s linear infinite;
+}
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+#notification{
+	width: 100%;
+	color: $white;
+	background: $green;
+	text-align: center;
+	@include font3(16px, bold);
+	line-height: 20px;
+	position: fixed;
+	top: 0; left: 0;
+	animation: slideInDown 0.8s, fadeOut 3s forwards 1s;
+	display: none;
+	padding: 20px;
+	z-index: 1;
+}
+@keyframes slideInDown{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+@keyframes fadeOut{
+	0%{
+		opacity: 1;
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
+.callFree{
+	@include hw(100vh, 100%);
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0; left: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+	display: none; z-index: 1;
+	opacity: 0;
+	&__content{
+		@include hw(333px, 484px);
+		background: $white;
+		border-radius: 15px;
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__header{
+		height: 80px;
+		background: $darkBlue;
+		border-radius: 15px 15px 0 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: -3px;
+		padding: 0 33.09px;
+	}
+	#callFreeClose{
+		cursor: pointer;
+	}
+	&__title{
+		color: #2EB4A7;
+		text-align: center;
+		@include font3(20px, 700);
+		margin-top: 41.22px;
+	}
+	&__desc{
+		color: $darkBlue;
+		text-align: center;
+		@include font3(14px, 600);
+		margin: 10.08px 0 26.53px;
+	}
+	&__socials{
+		width: 286px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		a, img{
+			border-radius: 30px;
+		}
+	}
+}
+.callFree.active{
+	opacity: 1;
+	pointer-events: auto;
+}
+/* General Settings */

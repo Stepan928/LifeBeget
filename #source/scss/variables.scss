@@ -1,0 +1,23 @@
+$white: #fff;
+$black: #000;
+$darkBlue: #1E1E34;
+$lightBlue: #3251C5;
+$blueText: #2B2B4F;
+$lightBlueText: #2CBCD4;
+$orange: #FF903F;
+$yellow: #F1D125;
+$green: #49BFB0;
+@mixin hw($height, $width){
+	height: $height;
+	width: $width;
+}
+@mixin font3($fontSize, $fontWeight){
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: normal;
+}
+@mixin flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
