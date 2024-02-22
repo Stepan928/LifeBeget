@@ -1,0 +1,35 @@
+/* Choose */
+.choose{
+	color: $black;
+	width: 100%;
+	padding: 64.46px 35px 90.94px;
+	&__title{
+		text-align: center;
+		@include font3(28px, 600);
+	}
+	&__container{
+		max-width: 945px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding-top: 60px;
+	}
+	&__box{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	&__miniTitle{
+		color: $green;
+		@include font3(20px, 800);
+		margin-bottom: 20px;
+	}
+	&__miniDesc{
+		@include font3(18px, 500);
+		margin-bottom: 51px;
+	}
+	.mb-0{
+		margin-bottom: 0;
+	}
+}
+/* Choose */

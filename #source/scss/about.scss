@@ -1,0 +1,33 @@
+/* About */
+.about{
+	width: 100%;
+	padding: 48.73px 154px 95.1px;
+	&__title{
+		color: $lightBlueText;
+		@include font3(28px, 600);
+	}
+	&__desc{
+		color: $blueText;
+		max-width: 780px;
+		@include font3(18px, 500);
+		line-height: 28px;
+		margin: 27.5px 0 38.08px;
+	}
+	&__list{
+		color: $black;
+		@include font3(16px, 400);
+		margin-bottom: 13px;
+		&::before{
+			content: '';
+			@include hw(10px, 10px);
+			border-radius: 20px;
+			background: $lightBlueText;
+			display: inline-block;
+			margin-right: 18px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+/* About */
